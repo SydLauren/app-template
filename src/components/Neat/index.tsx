@@ -12,7 +12,12 @@ const Neat = () => {
 
   return (
     <Flex gap={2} className="w-full">
-      <Button onClick={() => setCount((prev) => prev + 1)}>Neat!</Button>
+      <Button
+        data-testid={'neat-btn'}
+        onClick={() => setCount((prev) => prev + 1)}
+      >
+        Neat!
+      </Button>
       <p>{`Neat counter: ${count}`}</p>
     </Flex>
   );

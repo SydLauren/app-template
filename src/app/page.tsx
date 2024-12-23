@@ -3,6 +3,7 @@ import Neat from '@/components/Neat';
 import Flex from '@/components/ui/Flex';
 import { Toaster } from '@/components/ui/toaster';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 export default function Home() {
   const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ export default function Home() {
         <Neat />
       </Flex>
       <Toaster />
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
